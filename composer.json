@@ -1,0 +1,22 @@
+{
+    "name": "peertopark/commons",
+    "description": "Peer to Park commons",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mariam Navarro",
+            "email": "m.navarro@peertopark.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Peertopark\\": "src/"
+        },
+        "files": ["src/constants.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Peertopark\\Test\\": "tests/"
+        }
+    }
+}
