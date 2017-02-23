@@ -9,3 +9,6 @@
 define("DEVELOPMENT", "development");
 define("TESTING", "testing");
 define("PRODUCTION", "production");
+
+define("FACEBOOK", "facebook");
+define("GOOGLE", "google");
