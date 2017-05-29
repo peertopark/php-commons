@@ -19,14 +19,27 @@
 namespace Peertopark;
 
 /**
- * Description of Booleans
+ * URL Friendly version of base64_encode.
  *
- * @author mariam
+ * @author blackleg
  */
-class Booleans {
-
-    public static function fromString($bool) {
-        return filter_var($bool, FILTER_VALIDATE_BOOLEAN);
+class Base64Url {
+    
+    
+    public static function encode($string) {
+        if (is_null($string)) {
+            return NULL;
+        } else {
+            return urlencode(base64_encode($string));
+        }
     }
-
+    
+    public static function decode($string) {
+        if (is_null($string)) {
+            return NULL;
+        } else {
+            return base64_decode(urldecode($string));
+        }
+    }
+    
 }

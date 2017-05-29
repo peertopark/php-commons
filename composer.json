@@ -2,10 +2,15 @@
     "name": "peertopark/commons",
     "description": "Peer to Park commons",
     "type": "library",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Mariam Navarro",
             "email": "m.navarro@peertopark.com"
+        },
+        {
+            "name": "Hector Espert",
+            "email": "hespert@peertopark.com"
         }
     ],
     "autoload": {

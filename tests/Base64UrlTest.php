@@ -16,17 +16,22 @@
  * limitations under the License.
  */
 
-namespace Peertopark;
-
 /**
- * Description of Booleans
+ * Description of Base64UrlTest
  *
- * @author mariam
+ * @author blackleg
  */
-class Booleans {
-
-    public static function fromString($bool) {
-        return filter_var($bool, FILTER_VALIDATE_BOOLEAN);
+class Base64UrlTest extends PHPUnit_Framework_TestCase {
+    
+    
+    public function test_encode(){
+        $encoded = Peertopark\Base64Url::encode("https://www.peertopark.com");
+        $this->assertEquals("aHR0cHM6Ly93d3cucGVlcnRvcGFyay5jb20%3D", $encoded);
     }
-
+    
+    public function test_decode(){
+        $decoded = Peertopark\Base64Url::decode("aHR0cHM6Ly93d3cucGVlcnRvcGFyay5jb20%3D");
+        $this->assertEquals("https://www.peertopark.com", $decoded);
+    }
+    
 }
