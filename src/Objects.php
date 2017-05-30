@@ -16,21 +16,23 @@
  * limitations under the License.
  */
 
-use Peertopark\Booleans;
+namespace Peertopark;
+
 /**
- * Description of ConstatsTest
+ * Description of Objects
  *
- * @author mariam
+ * @author hector
  */
-class BooleansTest extends PHPUnit_Framework_TestCase {
+class Objects {
     
-    public function test_fromStringTrue (){
-        $val_true = Booleans::fromString("true");
-        $this->assertTrue($val_true);   
+    
+    public static function isNull($object) {
+        return is_null($object);
     }
     
-     public function test_fromStringFalse (){
-        $val_true = Booleans::fromString("false");
-        $this->assertFalse($val_true);   
+    public static function notNull($object) {
+        return !self::isNull($object);
     }
+    
+    
 }

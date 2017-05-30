@@ -16,21 +16,27 @@
  * limitations under the License.
  */
 
-use Peertopark\Booleans;
+use Peertopark\Strings;
+
 /**
- * Description of ConstatsTest
+ * Description of StringsTest
  *
- * @author mariam
+ * @author hector
  */
-class BooleansTest extends PHPUnit_Framework_TestCase {
+class StringsTest extends PHPUnit_Framework_TestCase {
     
-    public function test_fromStringTrue (){
-        $val_true = Booleans::fromString("true");
-        $this->assertTrue($val_true);   
+    
+    public function test_isEmpty (){
+        $this->assertTrue(Strings::isEmpty(NULL));
+        $this->assertTrue(Strings::isEmpty(""));
+        $this->assertFalse(Strings::isEmpty(" "));
+        $this->assertFalse(Strings::isEmpty("String")); 
     }
     
-     public function test_fromStringFalse (){
-        $val_true = Booleans::fromString("false");
-        $this->assertFalse($val_true);   
+    public function test_notEmpty (){
+        $this->assertFalse(Strings::notEmpty(NULL));
+        $this->assertFalse(Strings::notEmpty(""));
+        $this->assertTrue(Strings::notEmpty(" "));
+        $this->assertTrue(Strings::notEmpty("String")); 
     }
 }
